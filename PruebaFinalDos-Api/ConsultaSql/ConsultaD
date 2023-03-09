@@ -1,0 +1,10 @@
+d)	Se requiere un reporte con la cantidad de inventario de productos por marca, ordenado descendentemente. El reporte debe tener la siguiente forma:
+ORDER BY
+
+
+SELECT brands.brand_id, brands.brand_name, SUM (stocks.quantity) as contar
+FROM brands
+INNER JOIN products on products.brand_id = brands.brand_id
+INNER JOIN stocks on stocks.product_id = products.product_id 
+GROUP BY brands.brand_id, brands.brand_name
+ORDER BY contar DESC;

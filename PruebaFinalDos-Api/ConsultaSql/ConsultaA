@@ -1,0 +1,9 @@
+A) Se requiere un listado de productos con sus precios, de aquellos 
+productos cuyo modelo es 2016, ordenado alfabéticamente por nombre. 
+El reporte debe tener la siguiente forma:
+
+
+SELECT product_id, product_name, model_year, list_price
+FROM PRODUCTS 
+WHERE model_year LIKE 2016
+ORDER BY PRODUCTS.product_name ASC;
